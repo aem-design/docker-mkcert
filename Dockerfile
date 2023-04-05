@@ -22,3 +22,5 @@ RUN   apk update && \
 WORKDIR /certs
 ENTRYPOINT ["/bin/sh","-c"]
 CMD ["mkcert"]
+
+VOLUME /certs
