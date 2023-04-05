@@ -4,7 +4,7 @@ LABEL   maintainer="devops <devops@aem.design>" \
         version="1.0.0" \
         imagename="mkcert" \
         test.command=" mkcert --version" \
-        test.command.entrypoint="" \
+        test.command.direct="true" \
         test.command.verify="v1.4.4"
 
 WORKDIR /
