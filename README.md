@@ -5,8 +5,8 @@
 [![github issues](https://img.shields.io/github/issues/aem-design/docker-mkcert)](https://github.com/aem-design/docker-mkcert)
 [![github last commit](https://img.shields.io/github/last-commit/aem-design/docker-mkcert)](https://github.com/aem-design/docker-mkcert)
 [![github repo size](https://img.shields.io/github/repo-size/aem-design/docker-mkcert)](https://github.com/aem-design/docker-mkcert)
-[![docker stars](https://img.shields.io/docker/stars/aemdesign/dispatcher-sdk)](https://hub.docker.com/r/aemdesign/dispatcher-sdk)
-[![docker pulls](https://img.shields.io/docker/pulls/aemdesign/dispatcher-sdk)](https://hub.docker.com/r/aemdesign/dispatcher-sdk)
+[![docker stars](https://img.shields.io/docker/stars/aemdesign/mkcert)](https://hub.docker.com/r/aemdesign/mkcert)
+[![docker pulls](https://img.shields.io/docker/pulls/aemdesign/mkcert)](https://hub.docker.com/r/aemdesign/mkcert)
 
 A fast and simple way to generate CA and SSL certificates for your local dev environment
 
