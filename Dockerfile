@@ -19,5 +19,5 @@ RUN   apk update && \
       rm -rf /var/cache/apk/*
 
 WORKDIR /certs
-
+ENTRYPOINT ["/bin/sh","-c"]
 CMD ["mkcert"]

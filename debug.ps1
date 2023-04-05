@@ -19,5 +19,6 @@ printSectionLine "$COMMAND" "warn"
 
 $IMAGENAME=Select-String -path $FILE '.*imagename="(.*)".*' -AllMatches | Foreach-Object {$_.Matches} | Foreach-Object {$_.Groups[1].Value}
 
-docker run -it --rm -v ${PWD}/certs:/certs:rw ${NAME}:${TAG} /bin/sh
-docker run -it --rm -v ${PWD}/certs:/certs:rw ${NAME}:${TAG} /bin/sh -c "mkcert -install && mkcert -cert-file mkcert.pem -key-file mkcert.key -client localhost.dev localhost 127.0.0.1 ::1 && openssl pkcs12 -export -out mkcert.pfx -in mkcert.pem -inkey mkcert.key -certfile rootCA.pem -passout pass:123"
+docker run -it --rm -v ${PWD}/certs:/certs:rw ${NAME}:${TAG} "mkcert --version"
+#docker run -it --rm -v ${PWD}/certs:/certs:rw ${NAME}:${TAG} /bin/sh
+docker run -it --rm -v ${PWD}/certs:/certs:rw ${NAME}:${TAG} "mkcert -install && mkcert -cert-file mkcert.pem -key-file mkcert.key -client localhost.dev localhost 127.0.0.1 ::1 && openssl pkcs12 -export -out mkcert.pfx -in mkcert.pem -inkey mkcert.key -certfile rootCA.pem -passout pass:123"

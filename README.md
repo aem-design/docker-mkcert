@@ -24,3 +24,4 @@ or
 docker run -v ${PWD}:/root/.local/share/mkcert brunopadz/mkcert-docker:latest /bin/sh -c "mkcert -install && mkcert -cert-file mkcert.pem -key-file mkcert.key localhost.dev && openssl pkcs12 -export -out mkcert.pfx -in mkcert.pem -inkey mkcert.key -certfile rootCA.pem -passout pass:123;"
 ```
 
+gi
