@@ -15,13 +15,11 @@ A fast and simple way to generate CA and SSL certificates for your local dev env
 To create certificate with pkcs12 in your current directory:
 
 ```bash
-docker run -v $PWD:/root/.local/share/mkcert brunopadz/mkcert-docker:latest /bin/sh -c "mkcert -install && mkcert -cert-file mkcert.pem -key-file mkcert.key localhost.dev && openssl pkcs12 -export -out mkcert.pfx -in mkcert.pem -inkey mkcert.key -certfile rootCA.pem -passout pass:123;"
+docker run -v $PWD:/root/.local/share/mkcert brunopadz/mkcert-docker:latest /bin/sh -c "test ! -f mkcert.key && mkcert -install && mkcert -cert-file mkcert.pem -key-file mkcert.key localhost.dev && openssl pkcs12 -export -out mkcert.pfx -in mkcert.pem -inkey mkcert.key -certfile rootCA.pem -passout pass:123;"
 ```
 
 or
 
 ```powershell
-docker run -v ${PWD}:/root/.local/share/mkcert brunopadz/mkcert-docker:latest /bin/sh -c "mkcert -install && mkcert -cert-file mkcert.pem -key-file mkcert.key localhost.dev && openssl pkcs12 -export -out mkcert.pfx -in mkcert.pem -inkey mkcert.key -certfile rootCA.pem -passout pass:123;"
+docker run -v ${PWD}:/root/.local/share/mkcert brunopadz/mkcert-docker:latest /bin/sh -c "test ! -f mkcert.key && mkcert -install && mkcert -cert-file mkcert.pem -key-file mkcert.key localhost.dev && openssl pkcs12 -export -out mkcert.pfx -in mkcert.pem -inkey mkcert.key -certfile rootCA.pem -passout pass:123;"
 ```
-
-gi
